@@ -1,6 +1,5 @@
 import logo from './logo.svg';
 import './App.css';
-import AddUser from "../src/Pages/AddUser"
 import UploadForm from "./Components/UploadForm";
 import MainPage from "../src/Pages/MainPage"
 import FindUser from "./Pages/FindUser";

@@ -5,7 +5,6 @@ function AddUser ({userNameSet, userAgeSet, userEmailSet,userPasswordSet, upload
 
     const [error, setError] = useState([])
 
-
     const userNameRef = useRef()
     const userAgeRef = useRef()
     const userEmailRef = useRef()

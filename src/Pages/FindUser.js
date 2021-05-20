@@ -23,7 +23,6 @@ const FindUser = () => {
         })
     }
 
-
     return (
         <div className="App">
             <div>
