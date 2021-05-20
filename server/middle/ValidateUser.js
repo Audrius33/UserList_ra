@@ -35,6 +35,9 @@ module.exports = {
         if (!userEmail.includes("@") ) {
             return errorSend(false, "please include @ ")
         }
+        if (!lengthValidate(emailValid)) {
+            return errorSend(false, "please add email")
+        }
         if (!userEmail.includes(".")) {
             return errorSend(false, "please include .com ")
         }
