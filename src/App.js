@@ -18,7 +18,7 @@ function App() {
                 <div className="d-flex">
                     <Link className="m-20" to="/">User List</Link>
                     <Link className="m-20" to="/AddUser">Add User</Link>
-                    <Link className="m-20" to="/FindUser">Add User</Link>
+                    <Link className="m-20" to="/FindUser">Find User</Link>
                 </div>
 
                 <Switch>
