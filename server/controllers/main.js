@@ -29,9 +29,9 @@ module.exports = {
         res.send(allUsers)
     },
     updateUser: async (req, res) => {
-        let allUsers = await usersDb.find()
-        console.log(allUsers)
         console.log(req.params)
-
+        let oneUser = await usersDb.findOne({_email: req.params._id})
+        console.log({oneUser})
+        res.send({oneUser})
     }
 }
