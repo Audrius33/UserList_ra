@@ -26,4 +26,5 @@ mongoose.connect(process.env.MONGO_KEY, {
 
 app.use((req, res) => {
     console.log("connected to end")
+    console.log(req.body)
 })
