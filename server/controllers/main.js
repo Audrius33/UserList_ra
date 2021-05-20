@@ -32,8 +32,10 @@ module.exports = {
         console.log(req.params)
         // let oneUser = await usersDb.findOne({_email: req.params._id})
         let allUsers = await usersDb.find()
-
-        console.log(allUsers)
-        res.send("all good")
+        console.log(allUsers.email)
+        if (req.params === allUsers.email) {
+            console.log("all good")
+        }
+        res.send(allUsers)
     }
 }
