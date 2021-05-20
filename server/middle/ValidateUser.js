@@ -32,14 +32,8 @@ module.exports = {
         if (!lengthValidate(userPassword)) {
             return errorSend(false, "password too short or it is too long")
         }
-        if (!userEmail.includes("@") ) {
-            return errorSend(false, "please include @ ")
-        }
-        if (!lengthValidate(emailValid)) {
-            return errorSend(false, "please add email")
-        }
-        if (!userEmail.includes(".")) {
-            return errorSend(false, "please include .com ")
+        if (!userEmail.includes(" ") ) {
+            return errorSend(false, "please include email")
         }
 
         next()
