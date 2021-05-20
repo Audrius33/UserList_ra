@@ -30,8 +30,10 @@ module.exports = {
     },
     updateUser: async (req, res) => {
         console.log(req.params)
-        let oneUser = await usersDb.findOne({_email: req.params._id})
-        console.log({oneUser})
-        res.send({oneUser})
+        // let oneUser = await usersDb.findOne({_email: req.params._id})
+        let allUsers = await usersDb.find()
+
+        console.log(allUsers)
+        res.send("all good")
     }
 }
