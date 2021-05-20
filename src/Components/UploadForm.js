@@ -9,6 +9,8 @@ const UploadForm = () => {
     const [userAge, userAgeSet] = useState('')
     const [userEmail, userEmailSet] = useState('')
     const [userPassword, userPasswordSet] = useState('')
+    const [error, setError] = useState([])
+
 
 
     function upload() {
@@ -20,7 +22,8 @@ const UploadForm = () => {
             userPassword
         }
         http.post('/addUser', sendToServer).then(res => {
-            console.log(res)
+            console.log(res.message)
+            setError(res.message)
         })
     }
 
@@ -31,6 +34,7 @@ const UploadForm = () => {
             userEmailSet={userEmailSet}
             userPasswordSet={userPasswordSet}
             upload={upload}
+            error={error}
         />
     );
 };

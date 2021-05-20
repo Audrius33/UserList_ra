@@ -1,9 +1,8 @@
 import React, {useRef, useState} from 'react';
 
 
-function AddUser ({userNameSet, userAgeSet, userEmailSet,userPasswordSet, upload}) {
+function AddUser ({userNameSet, userAgeSet, userEmailSet,userPasswordSet, upload, error}) {
 
-    const [error, setError] = useState([])
 
     const userNameRef = useRef()
     const userAgeRef = useRef()
@@ -17,7 +16,7 @@ function AddUser ({userNameSet, userAgeSet, userEmailSet,userPasswordSet, upload
             <input ref={userEmailRef} onChange={(e) => userEmailSet(e.target.value)} type="text" placeholder="email address"/>
             <input ref={passwordRef} onChange={(e) => userPasswordSet(e.target.value)} type="password" placeholder="type password"/>
             <div className="largeButton" onClick={upload}>Add User</div>
-
+            <div>{error}</div>
         </div>
 
     );
