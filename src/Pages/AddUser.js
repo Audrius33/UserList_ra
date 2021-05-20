@@ -1,11 +1,23 @@
-import React from 'react';
+import React, {useRef} from 'react';
 
-const AddUser = () => {
+
+function AddUser ({userNameSet, userAgeSet, userEmailSet,userPasswordSet, upload}) {
+
+    const userNameRef = useRef()
+    const userAgeRef = useRef()
+    const userEmailRef = useRef()
+    const passwordRef = useRef()
+
     return (
-        <div>
-            kurimas
+        <div className="uploadForm">
+            <input ref={userNameRef} type="text" onChange={(e) => userNameSet(e.target.value)} placeholder="username"/>
+            <input ref={userAgeRef} onChange={(e) => userAgeSet(e.target.value)} type="number" placeholder="user age"/>
+            <input ref={userEmailRef} onChange={(e) => userEmailSet(e.target.value)} type="text" placeholder="email address"/>
+            <input ref={passwordRef} onChange={(e) => userPasswordSet(e.target.value)} type="password" placeholder="type password"/>
+            <div className="largeButton" onClick={upload}>Add User</div>
         </div>
+
     );
-};
+}
 
 export default AddUser;

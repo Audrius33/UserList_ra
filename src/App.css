@@ -69,24 +69,10 @@
   margin: 20px
 }
 
-.recipeCard {
-  width: 300px;
-  padding: 10px;
-  background-color: #eaeaea;
-  margin: 10px;
-  cursor: pointer;
+.f-column {
+  flex-direction: column;
 }
-
-.recipeCard img {
-  width: 100%;
-}
-
-.review {
-  margin: 10px;
-  background-color: #ecffdb;
-}
-
-.fav {
-  font-size: 40px;
-  cursor: pointer;
+.bg {
+  background-color: #5252ae;
+  width: 30%;
 }

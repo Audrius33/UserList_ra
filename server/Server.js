@@ -2,7 +2,7 @@ const express = require('express')
 const app = express()
 const cors = require('cors')
 const mongoose = require('mongoose')
-// const mainRouter = require('./router/router')
+const mainRouter = require('./router/router')
 require('dotenv').config({path: "../.env"})
 
 app.listen(3003)
@@ -22,9 +22,5 @@ mongoose.connect(process.env.MONGO_KEY, {
         console.log('Error while connecting to db')
     })
 
-// app.use(['/'], mainRouter)
+app.use(['/'], mainRouter)
 
-app.use((req, res) => {
-    console.log("connected to end")
-    console.log(req.body)
-})
