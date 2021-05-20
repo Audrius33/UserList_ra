@@ -6,6 +6,6 @@ const validateUser = require('../middle/ValidateUser')
 router.post('/addUser', validateUser.validatingUser, controller.saveItems)
 router.get('/getUsers', controller.sendUsers)
 router.get('/delUser/:id', controller.deleteUser)
-router.get('/getUser/', controller.updateUser)
+router.get('/updateUser/:id', controller.updateUser)
 
 module.exports = router

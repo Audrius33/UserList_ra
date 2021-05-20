@@ -1,9 +1,11 @@
 import {useState, useEffect} from 'react';
 import http from '../Plugins/Fetch'
+import {useParams} from "react-router-dom";
 
 
 const MainPage = () => {
     const [users, setAllUsers] = useState([])
+    const {id} = useParams()
 
     function removeUser(id) {
         console.log(id)
