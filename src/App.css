@@ -4,7 +4,9 @@
 
 .d-flex {
   display: flex;
+
 }
+
 
 .flex-wrap {
   flex-wrap: wrap;
@@ -14,6 +16,8 @@
   padding: 20px;
   width: 400px;
   margin: 50px;
+  background-color: #727ae3;
+  margin: auto;
 }
 
 .uploadForm textarea {
@@ -58,6 +62,10 @@
   justify-content: center;
   align-items: center;
   cursor: pointer;
+  -webkit-transition-duration: 0.4s;
+  transition-duration: 0.4s;
+  overflow: hidden;
+
 }
 
 .previewPhotos img {
@@ -75,4 +83,20 @@
 .bg {
   background-color: #5252ae;
   width: 30%;
+  transition: transform .2s
+}
+.bg:hover {
+  transform: scale(1.1)
+}
+.styleUserCard {
+  background-color: #c8c6c6;
+  width: 30%;
+  margin: auto;
+  display: flex;
+  flex-direction: column;
+  padding: 5px;
+}
+.btnEdit {
+  width: 50px;
+  margin: auto;
 }

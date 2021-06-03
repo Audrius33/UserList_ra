@@ -3,14 +3,19 @@ import './App.css';
 import UploadForm from "./Components/UploadForm";
 import MainPage from "../src/Pages/MainPage"
 import FindUser from "./Pages/FindUser";
+import UpdateUser from "./Pages/updateUser";
 import {
     BrowserRouter as Router,
     Switch,
     Route,
     Link
 } from "react-router-dom";
+import React, {useState} from 'react';
 
 function App() {
+
+    const [oneUser, setOneUser] = useState([])
+
     return (
         <Router>
             <div className="App">
@@ -28,7 +33,8 @@ function App() {
                         <UploadForm/>
                     </Route>
                     <Route path="/FindUser">
-                        <FindUser/>
+                        <FindUser setOneUser={setOneUser}/>
+                        <UpdateUser oneUser={oneUser}/>
                     </Route>
                 </Switch>
 

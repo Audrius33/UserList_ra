@@ -24,7 +24,7 @@ const MainPage = () => {
 
 
     return (
-        <div className="d-flex m-20 f-column">
+        <div className="d-flex m-20 flex-wrap">
             {users.map((item, index) =>
                 <div className="d-flex f-column bg m-20" key={index}>
                     <p className="d-flex f-column">{item.email}</p>

@@ -21,8 +21,8 @@ const UploadForm = () => {
             userEmail,
             userPassword
         }
+        console.log(sendToServer)
         http.post('/addUser', sendToServer).then(res => {
-            console.log(res.message)
             setError(res.message)
         })
     }

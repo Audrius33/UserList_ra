@@ -29,10 +29,14 @@ module.exports = {
         res.send(allUsers)
     },
     updateUser: async (req, res) => {
-        console.log(req.params)
-        // let oneUser = await usersDb.findOne({_email: req.params._id})
-        let allUsers = await usersDb.find()
-
-        res.send(allUsers)
+        const {email} = req.params
+        const oneUser = await usersDb.find({email: email})
+        res.send({success: true, user: oneUser})
+    },
+    userToBeUpdated: async (req, res) => {
+        const {id, username, age, email, psw} = req.body
+        await usersDb.findOneAndUpdate({_id: id}, {$set: {username, age, email, password: psw}})
+        res.send({success: true})
     }
+
 }

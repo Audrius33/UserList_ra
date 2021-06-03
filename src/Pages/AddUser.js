@@ -11,6 +11,7 @@ function AddUser ({userNameSet, userAgeSet, userEmailSet,userPasswordSet, upload
 
     return (
         <div className="uploadForm">
+
             <input ref={userNameRef} type="text" onChange={(e) => userNameSet(e.target.value)} placeholder="username"/>
             <input ref={userAgeRef} onChange={(e) => userAgeSet(e.target.value)} type="number" placeholder="user age"/>
             <input ref={userEmailRef} onChange={(e) => userEmailSet(e.target.value)} type="text" placeholder="email address"/>
