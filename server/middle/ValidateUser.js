@@ -17,6 +17,7 @@ module.exports = {
             userEmail,
             userPassword
         } = req.body
+        console.log(userEmail)
 
         function errorSend(error, message) {
             res.send({error: error, message: message})
@@ -37,7 +38,7 @@ module.exports = {
         }
 
         if (!validator.validate(userEmail)) {
-            return errorSend(true, 'need to put @ or .com. Example name.surname@gmail.com ')
+            return errorSend(true, 'need to put @ or .com Example name.surname@gmail.com ')
         }
 
         if (!lengthValidate(userPassword)) {
