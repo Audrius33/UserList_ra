@@ -2,7 +2,6 @@ const symbols = "!@#$%^&*()_>?,.';ąčėįšųūž][\/*"
 const validator = require("email-validator");
 
 
-
 const lengthValidate = (value) => {
     return value.length > 4 && value.length < 30
 
@@ -44,6 +43,7 @@ module.exports = {
         if (!lengthValidate(userPassword)) {
             return errorSend(false, "password too short or it is too long")
         }
+
         next()
     }
 
